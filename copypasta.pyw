@@ -1,6 +1,6 @@
 import requests
 import json
-import os
+import subprocess
 
 url = "https://www.reddit.com/r/copypasta/random.json"
 
@@ -15,4 +15,4 @@ response_json = json.loads(response.text)
 
 selftext = response_json[0]["data"]["children"][0]["data"]["selftext"]
 
-os.system("say " + selftext.replace("\n", ' '))
+subprocess.call("say " + selftext.replace("\n", ' '), creationflags=subprocess.CREATE_NO_WINDOW)
