@@ -6,7 +6,7 @@ url = "https://www.reddit.com/r/copypasta/random.json"
 
 payload = ""
 headers = {
-    'User-agent': 'philbert'
+    'User-agent': 'constantki'
     }
 
 response = requests.request("GET", url, data=payload, headers=headers)
