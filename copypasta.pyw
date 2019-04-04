@@ -20,4 +20,5 @@ selftext = response_json[0]["data"]["children"][0]["data"]["selftext"]
 path = os.path.abspath(__file__)[0:-13]
 
 
-subprocess.call( path + "\\say.exe " + selftext.replace("\n", ' '), creationflags=subprocess.CREATE_NO_WINDOW)
+CREATE_NO_WINDOW = 0x08000000
+subprocess.call( path + "\\say.exe " + selftext.replace("\n", ' '), creationflags=CREATE_NO_WINDOW)
